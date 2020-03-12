@@ -1,0 +1,146 @@
+@font-face {
+  font-family: BOLéD;
+  src: url("fonts/boled/boled-webfont.woff")format("woff");
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url("fonts/quicksand/quicksand-bold-webfont.woff")format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url("fonts/quicksand/quicksand-bolditalic-webfont.woff")format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url("fonts/quicksand/quicksand-italic-webfont.woff")format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url("fonts/quicksand/quicksand-light-webfont.woff")format("woff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url("fonts/quicksand/quicksand-regular-webfont.woff")format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url("fonts/quicksand/quicksand_dash-webfont.woff")format("woff");
+  font-weight: 100;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+header {
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  padding: 5px 0;;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.item:first-child {
+  margin-right: 0;
+}
+
+.item:last-child {
+  margin-left: auto;
+}
+
+li a {
+  margin-right: 30px;
+  font-family: Quicksand;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 17px;
+  color: #FFFFFF;
+}
+
+li a:hover {
+  color: #43E8E1;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #2E428B;
+}
+
+#logo {
+  width: 200px;
+  font-family: BOLéD;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 47px;
+  color: #FFFFFF;
+  cursor: default;
+}
+
+#login {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: Quicksand;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 17px;
+  color: #FFFFFF;
+}
+
+#login:hover {
+  color: #43E8E1;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+ion-icon {
+  margin: 0 5px;
+  --ionicon-stroke-width: 4rem;
+}
+
+@media only screen and (min-width: 1280px) {
+  header {
+    width: 1060px;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1279px) {
+  header {
+    width: 750px;
+  }
+}

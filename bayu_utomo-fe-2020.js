@@ -1,7 +1,9 @@
 $(document).ready(function(){
-  $(".main").onepage_scroll({
-    sectionContainer: "section",
-    responsiveFallback: 600,
-    loop: true
+  new fullScroll({
+    mainElement: 'main',
+    displayDots: true,
+    dotsPosition: 'left',
+    animateTime: 0.7,
+    animateFunction: 'ease'
   });
 });

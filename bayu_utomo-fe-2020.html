@@ -4,15 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DClouds - Web Hosting : Penyedia Layanan VPS Termurah di Indonesia</title>
+  <link rel="stylesheet" href="full-page-scroll.min.css">
   <link rel="stylesheet" href="bayu_utomo-fe-2020.css">
-  <link rel="stylesheet" href="onepage-scroll.css">
 </head>
 <body>
-  <div class="background"></div>
+  <div id="overlay"></div>
   <header>
     <div id="logo" class="item">
       DClouds
     </div>
+
     <nav class="item">
       <ul>
         <li>
@@ -29,13 +30,16 @@
         </li>
       </ul>
     </nav>
+
     <a href="#" id="login" class="item">
       <ion-icon name="lock-closed-outline"></ion-icon>
       Login
     </a>
   </header>
-  <main>
+
+  <main id="main" class="scroll-container">
     <section>
+      <div class="background"></div>
       <div class="banner">
         <div id="page-title">
           <h2 class="mv-1">Mau VPS Murah?</h2>
@@ -56,6 +60,10 @@
       <div class="banner image-banner">
       </div>
     </section>
+
+    <section>
+
+    </section>
   </main>
 
   <script
@@ -63,7 +71,7 @@
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-  <script src="jquery.onepage-scroll.js"></script>
+  <script src="full-page-scroll.min.js"></script>
   <script src="bayu_utomo-fe-2020.js"></script>
 </body>
 </html>

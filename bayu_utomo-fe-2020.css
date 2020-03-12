@@ -41,15 +41,29 @@
   font-weight: 100;
 }
 
+@font-face {
+  font-family: Montserrat;
+  src: url("fonts/montserrat/montserrat-bold-webfont.woff")format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("fonts/montserrat/montserrat-regular-webfont.woff")format("woff");
+  font-weight: normal;
+}
+
 body {
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
 }
 
 header {
-  position: relative;
+  z-index: 99;
+  position: fixed;
   align-items: center;
   width: 100%;
   height: 70px;
@@ -57,8 +71,49 @@ header {
   padding: 5px 0;;
 }
 
+main {
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  bottom: 0;
+}
+
 a {
   text-decoration: none;
+  color: #FFFFFF;
+}
+
+section {
+  width: 100%;
+  display: flex;
+}
+
+h2 {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 46px;
+  color: #FFFFFF;
+}
+
+h3 {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 34px;
+  color: #FFFFFF;
+}
+
+p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
   color: #FFFFFF;
 }
 
@@ -67,14 +122,6 @@ nav ul {
   display: flex;
   justify-content: center;
   align-content: center;
-}
-
-.item:first-child {
-  margin-right: 0;
-}
-
-.item:last-child {
-  margin-left: auto;
 }
 
 li a {
@@ -88,6 +135,10 @@ li a {
 
 li a:hover {
   color: #43E8E1;
+}
+
+.mv-1 {
+  margin: 10px 0;
 }
 
 .background {
@@ -128,19 +179,72 @@ li a:hover {
   align-items: center;
 }
 
+.item:first-child {
+  margin-right: 0;
+}
+
+.item:last-child {
+  margin-left: auto;
+}
+
 ion-icon {
-  margin: 0 5px;
+  margin: 0 10px;
   --ionicon-stroke-width: 4rem;
 }
 
+.banner {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+
+.banner:first-child {
+  margin-left: 0;
+}
+
+.banner:last-child {
+  margin-left: auto;
+}
+
+.image-banner {
+  background-image: url("images/server.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#check-domain button {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  border: 0;
+  background-color: #43E8E1;
+  font-size: 18px;
+  cursor: pointer;
+  color: #3D509D;
+}
+
+#check-domain button span {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 22px;
+}
+
 @media only screen and (min-width: 1280px) {
-  header {
+  header, main {
     width: 1060px;
   }
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1279px) {
-  header {
+  header, main {
     width: 750px;
   }
 }

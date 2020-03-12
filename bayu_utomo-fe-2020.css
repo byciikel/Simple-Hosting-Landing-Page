@@ -237,6 +237,11 @@ ion-icon {
   line-height: 22px;
 }
 
+.active {
+  top: unset !important;
+  left: unset !important;
+}
+
 @media only screen and (min-width: 1280px) {
   header, main {
     width: 1060px;

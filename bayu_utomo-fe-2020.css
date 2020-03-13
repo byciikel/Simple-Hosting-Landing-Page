@@ -66,7 +66,7 @@ header {
   z-index: 99;
   position: fixed;
   align-items: center;
-  width: 100%;
+  width: 80%;
   height: 70px;
   display: flex;
   padding: 5px 0;;
@@ -75,7 +75,7 @@ header {
 main {
   position: relative;
   align-items: center;
-  width: 100%;
+  width: 80% !important;
   height: 100vh;
   display: flex;
   bottom: 0;
@@ -239,19 +239,90 @@ main section .banner:last-child {
   font-weight: normal;
 }
 
-.active {
-  top: unset !important;
-  left: unset !important;
-}
+@media only screen and (min-width: 0px) and (max-width: 900px) {
+  h2 {
+    font-size: 1.5rem;
+  }
 
-@media only screen and (min-width: 1280px) {
-  header, main {
-    width: 1060px !important;
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  li a {
+    margin-right: 15px;
+    font-size: 1rem;
+  }
+
+  #logo {
+    width: 150px;
+    font-size: 2.5rem;
+  }
+
+  #login {
+    font-size: 1rem;
   }
 }
 
+@media only screen and (min-width: 1280px) {
+}
+
 @media only screen and (min-width: 800px) and (max-width: 1279px) {
-  header, main {
-    width: 750px !important;
+}
+
+@media only screen and (min-width: 640px) and (max-width: 799px) {
+  #check-domain button {
+    width: 150px;
+    height: 40px;
+    border-radius: 40px;
+    font-size: .8rem;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 639px) {
+  nav ul {
+    display: none;
+  }
+
+  #login {
+    display: none;
+  }
+
+  #check-domain button {
+    width: 150px;
+    height: 40px;
+    border-radius: 40px;
+    font-size: .8rem;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 449px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: .8rem;
+  }
+
+  section {
+    flex-wrap: wrap-reverse;
+    align-content: center;
+  }
+
+  .banner {
+    text-align: center;
+    justify-content: center;
+    height: auto;
+  }
+
+  .image-banner {
+    height: 250px;
   }
 }

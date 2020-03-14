@@ -146,7 +146,7 @@ nav.item ul li a:hover {
 
 .background {
   position: absolute;
-  z-index: -99;
+  z-index: -1;
   left: -50%;
   width: 500%;
   height: 100vh;
@@ -425,6 +425,97 @@ main section .banner:last-child {
 .scroll-container {
   display: flex;
   flex-wrap: wrap;
+}
+
+#cloud-container {
+  align-self: baseline;
+  width: 100%;
+}
+
+.cloud {
+  z-index: -1;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+}
+
+.cloud.one {
+  left: 25%;
+  top: -20%;
+  background-image: url("images/cloud1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.cloud.two {
+  left: -15%;
+  top: -25%;
+  background-image: url("images/cloud1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cloud.three {
+  right: -15%;
+  top: -25%;
+  background-image: url("images/cloud1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cloud.four {
+  z-index: -2;
+  left: 0;
+  top: -18%;
+  background-image: url("images/cloud2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cloud.five {
+  z-index: -2;
+  right: 0;
+  top: -18%;
+  background-image: url("images/cloud2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.cloud.six {
+  z-index: -2;
+  left: -30%;
+  top: -22%;
+  background-image: url("images/cloud2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cloud.seven {
+  z-index: -2;
+  right: -30%;
+  top: -22%;
+  background-image: url("images/cloud2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 @media only screen and (min-width: 1440px) {

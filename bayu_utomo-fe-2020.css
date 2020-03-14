@@ -69,7 +69,7 @@ header {
   width: 80%;
   height: 70px;
   display: flex;
-  padding: 10px 0;;
+  padding: 5px 0;;
 }
 
 main {
@@ -93,6 +93,14 @@ section {
   align-items: center;
 }
 
+h1 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  color: #3D509D;
+}
+
 h2 {
   font-family: Quicksand;
   font-style: normal;
@@ -114,6 +122,14 @@ p {
   font-style: normal;
   font-weight: normal;
   font-size: 1.5rem;
+  color: #FFFFFF;
+}
+
+span {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
   color: #FFFFFF;
 }
 
@@ -427,6 +443,14 @@ main section .banner:last-child {
   flex-wrap: wrap;
 }
 
+.dots li a.active:before {
+  background-color: #6A73E5;
+}
+
+.dots li a:before {
+  background-color: rgba(106, 115, 229, .7);
+}
+
 #cloud-container {
   align-self: baseline;
   width: 100%;
@@ -517,6 +541,101 @@ main section .banner:last-child {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
+
+#page-two {
+  display: block;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  margin-top: 20%;
+}
+
+main section .content:first-child {
+  margin-left: 0;
+}
+
+main section .content:last-child {
+  margin-left: auto;
+}
+
+.slide-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.slide-logo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #43E8E1;
+  margin-bottom: -65px;
+  z-index: 3;
+}
+
+.slide-text {
+  width: 70%;
+  padding: 20px;
+  padding-top: 65px;
+  background-color: #3D509D;
+  text-align: center;
+  cursor: pointer;
+}
+
+.slide-text:after {
+  content: " ";
+  position: absolute;
+  z-index: 2;
+  top: 80px;
+  left: 45px;
+  right: 15px;
+  bottom: -15px;
+  border: 5px solid #6A73E5;
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.slide-text:hover:after {
+  -webkit-transform: translate(-15px, -15px);
+  -moz-transform: translate(-15px, -15px);
+  -ms-transform: translate(-15px, -15px);
+  -o-transform: translate(-15px, -15px);
+  transform: translate(-15px, -15px);
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
+  border: 5px solid #43E8E1;
+}
+
+.owl-stage {
+  padding-bottom: 25px;
+}
+
+.owl-nav {
+  position: absolute;
+  right: 0;
+  top: -10%;
+  font-size: 1.5rem;
+  color: #3D509D;
+}
+
+.owl-nav button ion-icon {
+  margin: 0;
+}
+
+.owl-nav button ion-icon:last-child {
+  margin-left: 20px;
+  margin-right: -10px;
+}
+
 
 @media only screen and (min-width: 1440px) {
   h2 {

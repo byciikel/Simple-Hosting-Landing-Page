@@ -7,6 +7,16 @@ $(document).ready(function(){
     animateFunction: 'ease'
   });
 
+  $(".owl-carousel").owlCarousel({
+    nav: true,
+    margin: 5,
+    loop: true,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:true,
+    navText: ["<ion-icon name='chevron-back-outline'></ion-icon>", "<ion-icon name='chevron-forward-outline'></ion-icon>"]
+  });
+
   function toggleSidebar(e) {
     $(".hamburger-button").toggleClass("active");
 

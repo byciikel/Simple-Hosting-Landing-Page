@@ -69,7 +69,7 @@ header {
   width: 80%;
   height: 70px;
   display: flex;
-  padding: 5px 0;;
+  padding: 10px 0;;
 }
 
 main {
@@ -148,7 +148,7 @@ nav.item ul li a:hover {
   position: absolute;
   z-index: -99;
   left: -50%;
-  width: 200%;
+  width: 500%;
   height: 100vh;
   background-color: #2E428B;
 }
@@ -208,7 +208,6 @@ ion-icon {
   z-index: 2;
   position: relative;
   height: 100%;
-  background-color: #2D3142;
   -webkit-transition: transform .7s ease-in-out;
   -moz-transition: transform .7s ease-in-out;
   -ms-transition: transform .7s ease-in-out;
@@ -217,9 +216,7 @@ ion-icon {
 }
 
 .nav-right {
-  position: fixed;
   right: 40px;
-  top: 20px;
 }
 
 .nav-right.visible-xs {
@@ -382,8 +379,8 @@ ion-icon {
 }
 
 .banner {
-  width: 500px;
-  height: 500px;
+  width: 50%;
+  height: 50%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -400,9 +397,9 @@ main section .banner:last-child {
 
 .image-banner {
   background-image: url("images/server.png");
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 #check-domain button {
@@ -423,6 +420,39 @@ main section .banner:last-child {
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
+}
+
+.scroll-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1440px) {
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  li a {
+    margin-right: 30px;
+    font-size: 2rem;
+  }
+
+  #logo {
+    width: 300px;
+    font-size: 5rem;
+  }
+
+  #login {
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 900px) {
@@ -450,6 +480,19 @@ main section .banner:last-child {
 
   #login {
     font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  header {
+    padding: 20px 0;
+  }
+
+  #check-domain button {
+    width: 250px;
+    height: 60px;
+    border-radius: 60px;
+    font-size: 1.5rem;
   }
 }
 

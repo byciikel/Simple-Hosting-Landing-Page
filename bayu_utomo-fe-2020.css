@@ -507,6 +507,33 @@ main section .banner:last-child {
   background-color: #43E8E1;
   margin-bottom: -65px;
   z-index: 3;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70px;
+}
+
+.icon-ssd {
+  background-image: url("images/icon-ssd.png");
+}
+
+.icon-cloud {
+  background-image: url("images/icon-cloud.png");
+}
+
+.icon-unlimited {
+  background-image: url("images/icon-unlimited.png");
+}
+
+.icon-wallet {
+  background-image: url("images/icon-wallet.png");
+}
+
+.icon-support {
+  background-image: url("images/icon-support.png");
+}
+
+.icon-deploy {
+  background-image: url("images/icon-deploy.png");
 }
 
 .slide-text {

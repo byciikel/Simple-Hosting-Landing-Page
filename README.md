@@ -8,4 +8,4 @@ https://github.com/byciikel/Simple-Hosting-Landing-Page.git
 
 ### Demo App
 
-https://byciikel.github.io/Simple-Hosting-Landing-Page/(https://byciikel.github.io/Simple-Hosting-Landing-Page/bayu_utomo-fe-2020.html)
+https://byciikel.github.io/Simple-Hosting-Landing-Page/bayu_utomo-fe-2020.html

@@ -9,12 +9,23 @@ $(document).ready(function(){
 
   $(".owl-carousel").owlCarousel({
     nav: true,
-    margin: 5,
+    center: true,
+    margin: 30,
     loop: true,
-    autoplay:true,
-    autoplayTimeout:5000,
-    autoplayHoverPause:true,
-    navText: ["<ion-icon name='chevron-back-outline'></ion-icon>", "<ion-icon name='chevron-forward-outline'></ion-icon>"]
+    autoWidth: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    navText: ["<ion-icon name='chevron-back-outline'></ion-icon>", "<ion-icon name='chevron-forward-outline'></ion-icon>"],
+    responsiveClass: true,
+    responsive:{
+        0:{
+            items:1,
+        },
+        1000:{
+            items:3,
+        }
+    }
   });
 
   function toggleSidebar(e) {

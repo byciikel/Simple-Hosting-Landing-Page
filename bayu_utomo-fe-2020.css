@@ -395,8 +395,8 @@ ion-icon {
 }
 
 .banner {
-  width: 50%;
-  height: 50%;
+  width: 500px;
+  height: 500px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -415,7 +415,7 @@ main section .banner:last-child {
   background-image: url("images/server.png");
   background-position: right;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 #check-domain button {
@@ -436,6 +436,7 @@ main section .banner:last-child {
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
+  color: #3D509D;
 }
 
 .scroll-container {
@@ -459,13 +460,14 @@ main section .banner:last-child {
 .cloud {
   z-index: -1;
   position: absolute;
-  width: 50%;
-  height: 50%;
+  width: 140%;
+  height: 100%;
 }
 
 .cloud.one {
-  left: 25%;
-  top: -20%;
+  position: absolute;
+  left: -20%;
+  top: -270px;
   background-image: url("images/cloud1.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -477,69 +479,14 @@ main section .banner:last-child {
 }
 
 .cloud.two {
-  left: -15%;
-  top: -25%;
-  background-image: url("images/cloud1.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.cloud.three {
-  right: -15%;
-  top: -25%;
-  background-image: url("images/cloud1.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.cloud.four {
+  position: absolute;
   z-index: -2;
-  left: 0;
-  top: -18%;
+  right: -20%;
+  top: -250px;
   background-image: url("images/cloud2.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-.cloud.five {
-  z-index: -2;
-  right: 0;
-  top: -18%;
-  background-image: url("images/cloud2.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
-
-.cloud.six {
-  z-index: -2;
-  left: -30%;
-  top: -22%;
-  background-image: url("images/cloud2.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.cloud.seven {
-  z-index: -2;
-  right: -30%;
-  top: -22%;
-  background-image: url("images/cloud2.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
 }
 
 #page-two {
@@ -565,6 +512,7 @@ main section .content:last-child {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 300px;
 }
 
 .slide-logo {
@@ -577,7 +525,7 @@ main section .content:last-child {
 }
 
 .slide-text {
-  width: 70%;
+  width: 100%;
   padding: 20px;
   padding-top: 65px;
   background-color: #3D509D;
@@ -589,10 +537,10 @@ main section .content:last-child {
   content: " ";
   position: absolute;
   z-index: 2;
-  top: 80px;
-  left: 45px;
-  right: 15px;
-  bottom: -15px;
+  top: 70px;
+  left: 5px;
+  right: -10px;
+  bottom: -10px;
   border: 5px solid #6A73E5;
   -webkit-transition: all .7s ease;
   -moz-transition: all .7s ease;
@@ -602,11 +550,11 @@ main section .content:last-child {
 }
 
 .slide-text:hover:after {
-  -webkit-transform: translate(-15px, -15px);
-  -moz-transform: translate(-15px, -15px);
-  -ms-transform: translate(-15px, -15px);
-  -o-transform: translate(-15px, -15px);
-  transform: translate(-15px, -15px);
+  -webkit-transform: translate(-5px, -5px);
+  -moz-transform: translate(-5px, -5px);
+  -ms-transform: translate(-5px, -5px);
+  -o-transform: translate(-5px, -5px);
+  transform: translate(-5px, -5px);
   -webkit-transition: all .7s ease;
   -moz-transition: all .7s ease;
   -ms-transition: all .7s ease;
@@ -634,35 +582,6 @@ main section .content:last-child {
 .owl-nav button ion-icon:last-child {
   margin-left: 20px;
   margin-right: -10px;
-}
-
-
-@media only screen and (min-width: 1440px) {
-  h2 {
-    font-size: 4rem;
-  }
-
-  h3 {
-    font-size: 3rem;
-  }
-
-  p {
-    font-size: 2rem;
-  }
-
-  li a {
-    margin-right: 30px;
-    font-size: 2rem;
-  }
-
-  #logo {
-    width: 300px;
-    font-size: 5rem;
-  }
-
-  #login {
-    font-size: 2rem;
-  }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 900px) {
@@ -696,6 +615,32 @@ main section .content:last-child {
 @media only screen and (min-width: 1440px) {
   header {
     padding: 20px 0;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  li a {
+    margin-right: 30px;
+    font-size: 2rem;
+  }
+
+  #logo {
+    width: 300px;
+    font-size: 5rem;
+  }
+
+  #login {
+    font-size: 2rem;
   }
 
   #check-domain button {
@@ -741,7 +686,7 @@ main section .content:last-child {
     font-size: .8rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 449px) {
+@media only screen and (min-width: 0px) and (max-width: 639px) {
   h2 {
     font-size: 1.3rem;
   }
@@ -767,5 +712,6 @@ main section .content:last-child {
 
   .image-banner {
     height: 250px;
+    background-position: center;
   }
 }

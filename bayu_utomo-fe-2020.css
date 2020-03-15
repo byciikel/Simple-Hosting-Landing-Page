@@ -69,7 +69,7 @@ header {
   width: 80%;
   height: 70px;
   display: flex;
-  padding: 5px 0;;
+  padding: 5px 0;
 }
 
 main {
@@ -133,6 +133,19 @@ span {
   color: #FFFFFF;
 }
 
+sup, sub {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+br {
+  content: "";
+  margin: .5em;
+  display: block;
+}
+
 *:focus {
   outline: none;
 }
@@ -162,11 +175,35 @@ nav.item ul li a:hover {
 
 .background {
   position: absolute;
-  z-index: -1;
+  z-index: -99;
   left: -50%;
   width: 500%;
   height: 100vh;
   background-color: #2E428B;
+}
+
+.background.overlay {
+  background-color: rgba(46, 66, 139, .6);
+}
+
+.cover-image {
+  z-index: -100;
+  width: 140%;
+  height: 100%;
+  position: absolute;
+  left: -20%;
+  background-image: url("images/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-background {
+  background-color: #2E428B;
+  position: absolute;
+  width: 140%;
+  height: 80px;
+  left: -20%;
+  top: 0;
 }
 
 #logo {
@@ -457,7 +494,7 @@ main section .banner:last-child {
 }
 
 .cloud {
-  z-index: -1;
+  z-index: -101;
   position: absolute;
   width: 140%;
   height: 200px;
@@ -473,7 +510,7 @@ main section .banner:last-child {
 }
 
 .cloud.two {
-  z-index: -2;
+  z-index: -102;
   top: -90px;
   background-image: url("images/cloud2.png");
   background-repeat: no-repeat;
@@ -481,7 +518,7 @@ main section .banner:last-child {
   background-position-x: center;
 }
 
-#page-two {
+.page {
   display: block;
 }
 
@@ -490,6 +527,7 @@ main section .banner:last-child {
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
+  width: 100%;
   height: 100%;
 }
 
@@ -595,6 +633,126 @@ main section .banner:last-child {
   margin-right: -10px;
 }
 
+.layanan {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.layanan h1 {
+  color: #FFFFFF;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+}
+
+.card .card-center h2 {
+  margin: 10px;
+}
+
+.card .card-left h2 {
+  margin: 10px;
+}
+
+.card .card-right h2 {
+  margin: 10px;
+}
+
+.card-center {
+  width: 300px;
+  padding: 20px;
+  background-color: #2E428B;
+  z-index: 2;
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
+  text-align: center;
+}
+
+.card-left {
+  -webkit-transform: translateX(50px);
+  -moz-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  -o-transform: translateX(50px);
+  transform: translateX(50px);
+}
+
+.card-left:hover {
+  width: 300px;
+  z-index: 3;
+}
+
+.card-left:hover button {
+  display: block !important;
+}
+
+.card-right:hover {
+  width: 300px;
+  z-index: 3;
+}
+
+.card-right:hover button {
+  display: block !important;
+}
+
+.card-right {
+  -webkit-transform: translateX(-50px);
+  -moz-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
+  transform: translateX(-50px);
+}
+
+.card-left, .card-right {
+  z-index: 1;
+  width: 200px;
+  height: 80%;
+  padding: 10px;
+  text-align: center;
+  padding-bottom: 20px;
+  background-color: #6A73E5;
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.button {
+  width: auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  border: 0;
+  background-color: #43E8E1;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #3D509D;
+}
+
+.button span {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  color: #3D509D;
+}
+
+.detail-paket {
+  margin: 10px auto;
+  margin-top: 20px;
+}
+
 @media only screen and (min-width: 0px) and (max-width: 900px) {
   h2 {
     font-size: 1.5rem;
@@ -628,6 +786,10 @@ main section .banner:last-child {
     padding: 20px 0;
   }
 
+  h1 {
+    font-size: 3rem;
+  }
+
   h2 {
     font-size: 4rem;
   }
@@ -640,9 +802,21 @@ main section .banner:last-child {
     font-size: 2rem;
   }
 
+  span {
+    font-size: 2rem;
+  }
+
+  sup, sub {
+    font-size: 2rem;
+  }
+
   li a {
     margin-right: 30px;
     font-size: 2rem;
+  }
+
+  .header-background {
+    height: 115px;
   }
 
   #logo {
@@ -659,7 +833,19 @@ main section .banner:last-child {
     height: 60px;
     border-radius: 60px;
     font-size: 1.5rem;
-  }  
+  }
+
+  .card-center {
+    width: 400px;
+  }
+
+  .card-left, .card-right {
+    width: 300px;
+  }
+
+  .card-left:hover, .card-right:hover {
+    width: 400px;
+  }
 }
 
 @media only screen and (min-width: 1800px) {
@@ -724,18 +910,6 @@ main section .banner:last-child {
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 639px) {
-  h2 {
-    font-size: 1.3rem;
-  }
-
-  h3 {
-    font-size: 1rem;
-  }
-
-  p {
-    font-size: .8rem;
-  }
-
   section {
     flex-wrap: wrap-reverse;
     align-content: center;
@@ -755,5 +929,65 @@ main section .banner:last-child {
   .content {
     width: 80%;
     margin: 0 auto;
+  }
+
+  .slide-text {
+    padding: 50px;
+    padding-top: 70px;
+  }
+
+  .card {
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .card-center {
+    width: 65%;
+    -webkit-transform: translateY(10%);
+    -moz-transform: translateY(10%);
+    -ms-transform: translateY(10%);
+    -o-transform: translateY(10%);
+    transform: translateY(10%);
+  }
+
+  .card-center button {
+    display: none;
+  }
+
+  .card-center:hover {
+    width: 75%;
+    z-index: 3;
+  }
+
+  .card-center:hover .button {
+    display: block;
+  }
+
+  .card-left {
+    width: 60%;
+    -webkit-transform: translateY(90%);
+    -moz-transform: translateY(90%);
+    -ms-transform: translateY(90%);
+    -o-transform: translateY(90%);
+    transform: translateY(90%);
+  }
+
+  .card-left:hover {
+    width: 80%;
+    z-index: 3;
+  }
+
+  .card-right {
+    width: 80%;
+    z-index: 2;
+    -webkit-transform: translateY(-70%);
+    -moz-transform: translateY(-70%);
+    -ms-transform: translateY(-70%);
+    -o-transform: translateY(-70%);
+    transform: translateY(-70%);
+  }
+
+  .card-right:hover {
+    width: 85%;
   }
 }

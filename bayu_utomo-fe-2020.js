@@ -54,4 +54,102 @@ $(document).ready(function(){
       toggleSidebar();
     }
   });
+
+  $.getJSON("https://mock-hosting-api.herokuapp.com/db", function(data) {
+    console.log(data)
+    $(".card-center").append(`
+      <h2>${ data.hosting[1].nama }</h2>
+      <p>
+        <sup>Rp</sup> <b>${ data.hosting[1].harga }</b><sub>/bln</sub>
+      </p>
+      <span>
+        <b>${ data.hosting[1].ringkasan[0].split(" ")[0] }</b> ${ data.hosting[1].ringkasan[0].split(" ")[1] }
+      </span>
+      <br/>
+      <span>
+        <b>${ data.hosting[1].ringkasan[1].split(" ")[0] }</b> ${ data.hosting[1].ringkasan[1].split(" ")[1] }
+      </span>
+      <br/>
+      <span>
+        <b>${ data.hosting[1].ringkasan[2].split(" ")[0] }</b> ${ data.hosting[1].ringkasan[2].split(" ")[1] }
+      </span>
+      <br/>
+      <span>
+        <b>${ data.hosting[1].ringkasan[3].split(" ")[0] }</b> ${ data.hosting[1].ringkasan[3].split(" ")[1] }
+      </span>
+      <br/>
+      <span>
+        <b>${ data.hosting[1].ringkasan[4].split(" ")[0] }</b> ${ data.hosting[1].ringkasan[4].split(" ")[1] }
+      </span>
+      <br/>
+      <span>
+        <b>${ data.hosting[1].ringkasan[5].split(" ")[0] }</b> ${ data.hosting[1].ringkasan[5].split(" ")[1] }
+      </span>
+      <button class="button detail-paket">
+        <span>
+          Detail Paket
+        </span>
+      </button>
+    `)
+    $(".card-left").append(`
+      <h2>${ data.hosting[0].nama }</h2>
+      <p>
+        <sup>Rp</sup> <b>${ data.hosting[0].harga }</b><sub>/bln</sub>
+      </p>
+      <span>
+        <b>${ data.hosting[0].ringkasan[0].split(" ")[0] }</b> ${ data.hosting[0].ringkasan[0].split(" ")[1] }
+      </span>
+      <br/>
+      <span>
+        <b>${ data.hosting[0].ringkasan[1].split(" ")[0] }</b> ${ data.hosting[0].ringkasan[1].split(" ")[1] }
+      </span>
+      <br/>
+      <span>
+        <b>${ data.hosting[0].ringkasan[2].split(" ")[0] }</b> ${ data.hosting[0].ringkasan[2].split(" ")[1] }
+      </span>
+      <br/>
+      <span>
+        <b>${ data.hosting[0].ringkasan[3].split(" ")[0] }</b> ${ data.hosting[0].ringkasan[3].split(" ")[1] }
+      </span>
+      <button class="button detail-paket animated pulse" style="display: none">
+        <span>
+          Detail Paket
+        </span>
+      </button>
+    `)
+    $(".card-right").append(`
+      <h2>${ data.hosting[2].nama }</h2>
+      <p>
+        <sup>Rp</sup> <b>${ data.hosting[2].harga }</b><sub>/bln</sub>
+      </p>
+      <span>
+        <b>${ data.hosting[2].ringkasan[0].split(" ")[0] }</b> ${ data.hosting[2].ringkasan[0].split(" ")[1] }
+      </span>
+      <br/>
+      <span>
+        <b>${ data.hosting[2].ringkasan[1].split(" ")[0] }</b> ${ data.hosting[2].ringkasan[1].split(" ")[1] }
+      </span>
+      <br/>
+      <span>
+        <b>${ data.hosting[2].ringkasan[2].split(" ")[0] }</b> ${ data.hosting[2].ringkasan[2].split(" ")[1] }
+      </span>
+      <br/>
+      <span>
+        <b>${ data.hosting[2].ringkasan[3].split(" ")[0] }</b> ${ data.hosting[2].ringkasan[3].split(" ")[1] }
+      </span>
+      <br/>
+      <span>
+        <b>${ data.hosting[2].ringkasan[4].split(" ")[0] }</b> ${ data.hosting[2].ringkasan[4].split(" ")[1] }
+      </span>
+      <br/>
+      <span>
+        <b>${ data.hosting[2].ringkasan[5].split(" ")[0] }</b> ${ data.hosting[2].ringkasan[5].split(" ")[1] }
+      </span>
+      <button class="button detail-paket animated pulse" style="display: none">
+        <span>
+          Detail Paket
+        </span>
+      </button>
+    `)
+  })
 });

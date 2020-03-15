@@ -174,7 +174,7 @@ nav.item ul li a:hover {
   font-family: BOLéD;
   font-style: normal;
   font-weight: normal;
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: #FFFFFF;
   cursor: default;
 }
@@ -453,7 +453,6 @@ main section .banner:last-child {
 }
 
 #cloud-container {
-  align-self: baseline;
   width: 100%;
 }
 
@@ -461,32 +460,25 @@ main section .banner:last-child {
   z-index: -1;
   position: absolute;
   width: 140%;
-  height: 100%;
+  height: 200px;
+  left: -20%;
+  top: -90px;
 }
 
 .cloud.one {
-  position: absolute;
-  left: -20%;
-  top: -270px;
   background-image: url("images/cloud1.png");
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+  background-size: cover;
+  background-position-x: center;
 }
 
 .cloud.two {
-  position: absolute;
   z-index: -2;
-  right: -20%;
-  top: -250px;
+  top: -90px;
   background-image: url("images/cloud2.png");
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position-x: center;
 }
 
 #page-two {
@@ -495,17 +487,10 @@ main section .banner:last-child {
 
 .content {
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
   align-content: center;
-  margin-top: 20%;
-}
-
-main section .content:first-child {
-  margin-left: 0;
-}
-
-main section .content:last-child {
-  margin-left: auto;
+  height: 100%;
 }
 
 .slide-item {
@@ -570,8 +555,7 @@ main section .content:last-child {
 .owl-nav {
   position: absolute;
   right: 0;
-  top: -10%;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #3D509D;
 }
 
@@ -648,13 +632,39 @@ main section .content:last-child {
     height: 60px;
     border-radius: 60px;
     font-size: 1.5rem;
+  }  
+}
+
+@media only screen and (min-width: 1800px) {
+  .cloud {
+    height: 450px;
+    top: -160px;
+  }
+
+  .cloud.two {
+    top: -150px;
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1440px) and (max-width: 1799px) {
+  .cloud {
+    height: 300px;
+    top: -150px;
+  }
+
+  .cloud.two {
+    top: -140px;
+  }
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1279px) {
+@media only screen and (min-width: 1201px) and (max-width: 1439px) {
+  .cloud {
+    height: 250px;
+    top: -100px;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
 }
 
 @media only screen and (min-width: 640px) and (max-width: 799px) {
@@ -713,5 +723,10 @@ main section .content:last-child {
   .image-banner {
     height: 250px;
     background-position: center;
+  }
+
+  .content {
+    width: 80%;
+    margin: 0 auto;
   }
 }

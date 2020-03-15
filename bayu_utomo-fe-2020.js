@@ -56,7 +56,6 @@ $(document).ready(function(){
   });
 
   $.getJSON("https://mock-hosting-api.herokuapp.com/db", function(data) {
-    console.log(data)
     $(".card-center").append(`
       <h2>${ data.hosting[1].nama }</h2>
       <p>
